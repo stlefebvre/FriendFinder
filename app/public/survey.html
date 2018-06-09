@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="./app/data/friends.js"></script>
+    <script src="./app/routing/apiRoutes.js"></script>
+    <script src="./app/routing/htmlRoutes.js"></script>
+    <script src="server.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Survey Questions</h2>
+
+        <hr>
+
+        <h3>About You</h3>
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Your Name (Required)</label>
+                <input type="name" class="form-control" id="nameInput" placeholder="Emily Doe">
+                <br>
+                <label for="photoInput">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photoInput">
+            </div>
+        </form>
+
+        <hr>
+
+        <form>
+            <h4>Question 1</h4>
+            <p class="lead">Your mind is always buzzing with unexplored ideas and plans.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q1op1" value="1">
+                <label class="form-check-label" for="Q1op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q1op2" value="2">
+                <label class="form-check-label" for="Q1op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q1op3" value="3">
+                <label class="form-check-label" for="Q1op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q1op4" value="4">
+                <label class="form-check-label" for="Q1op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q1op5" value="5">
+                <label class="form-check-label" for="Q1op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 2</h4>
+            <p class="lead">Generally speaking, you rely more on your experience than your imagination</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q2op1" value="1">
+                <label class="form-check-label" for="Q2op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q2op2" value="2">
+                <label class="form-check-label" for="Q2op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q2op3" value="3">
+                <label class="form-check-label" for="Q2op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q2op4" value="4">
+                <label class="form-check-label" for="Q2op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q2op5" value="5">
+                <label class="form-check-label" for="Q2op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 3</h4>
+            <p class="lead">You find it easy to stay relaxed and focused even when there is some pressure.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q3op1" value="1">
+                <label class="form-check-label" for="Q3op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q3op2" value="2">
+                <label class="form-check-label" for="Q3op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q3op3" value="3">
+                <label class="form-check-label" for="Q3op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q3op4" value="4">
+                <label class="form-check-label" for="Q3op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q3op5" value="5">
+                <label class="form-check-label" for="Q3op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 4</h4>
+            <p class="lead">You rarely do something just out of sheer curiosity.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q4op1" value="1">
+                <label class="form-check-label" for="Q4op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q4op2" value="2">
+                <label class="form-check-label" for="Q4op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q4op3" value="3">
+                <label class="form-check-label" for="Q4op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q4op4" value="4">
+                <label class="form-check-label" for="Q4op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q4op5" value="5">
+                <label class="form-check-label" for="Q4op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 5</h4>
+            <p class="lead">People can rarely upset you.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q5op1" value="1">
+                <label class="form-check-label" for="Q5op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q5op2" value="2">
+                <label class="form-check-label" for="Q5op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q5op3" value="3">
+                <label class="form-check-label" for="Q5op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q5op4" value="4">
+                <label class="form-check-label" for="Q5op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q5op5" value="5">
+                <label class="form-check-label" for="Q5op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 6</h4>
+            <p class="lead">It is often difficult for you to relate to other people's feelings.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q6op1" value="1">
+                <label class="form-check-label" for="Q6op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q6op2" value="2">
+                <label class="form-check-label" for="Q6op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q6op3" value="3">
+                <label class="form-check-label" for="Q6op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q6op4" value="4">
+                <label class="form-check-label" for="Q6op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q6op5" value="5">
+                <label class="form-check-label" for="Q6op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 7</h4>
+            <p class="lead">In a discussion, truth should be more important than people's sensetivities.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q7op1" value="1">
+                <label class="form-check-label" for="Q7op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q7op2" value="2">
+                <label class="form-check-label" for="Q7op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q7op3" value="3">
+                <label class="form-check-label" for="Q7op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q7op4" value="4">
+                <label class="form-check-label" for="Q7op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q7op5" value="5">
+                <label class="form-check-label" for="Q7op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 8</h4>
+            <p class="lead">You rarely get carried away by fantasies and ideas.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q8op1" value="1">
+                <label class="form-check-label" for="Q8op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q8op2" value="2">
+                <label class="form-check-label" for="Q8op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q8op3" value="3">
+                <label class="form-check-label" for="Q8op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q8op4" value="4">
+                <label class="form-check-label" for="Q8op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q8op5" value="5">
+                <label class="form-check-label" for="Q8op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 9</h4>
+            <p class="lead">You think that everyone's views should be respected regardless of whether they are supported by facts or not.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q9op1" value="1">
+                <label class="form-check-label" for="Q9op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q9op2" value="2">
+                <label class="form-check-label" for="Q9op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q9op3" value="3">
+                <label class="form-check-label" for="Q9op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q9op4" value="4">
+                <label class="form-check-label" for="Q9op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q9op5" value="5">
+                <label class="form-check-label" for="Q9op5">5 (Strongly Agree)</label>
+            </div>
+
+            <br>
+            <br>
+
+            <h4>Question 10</h4>
+            <p class="lead">You feel more energetic after spending time with a group of people.</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q10op1" value="1">
+                <label class="form-check-label" for="Q10op1">1 (Strongly Disagree)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q10op2" value="2">
+                <label class="form-check-label" for="Q10op2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q10op3" value="3">
+                <label class="form-check-label" for="Q10op3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q10op4" value="4">
+                <label class="form-check-label" for="Q10op4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Q10op5" value="5">
+                <label class="form-check-label" for="Q10op5">5 (Strongly Agree)</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
