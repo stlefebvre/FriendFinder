@@ -1,0 +1,1 @@
+//GET methods and whatnot to determine what data gets pulled from the front end
