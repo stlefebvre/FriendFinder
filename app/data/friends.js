@@ -1,6 +1,6 @@
 //Host friends variable, export it to server.js where bodyparser will parse through it
 //Possibly add a function to add new friends
-var friends = [{
+var friendsArray = [{
     name: "Bill Burr",
     photo: "https://pixel.nymag.com/imgs/daily/vulture/2018/05/17/bill-burr/17-bill-burr-feature.w512.h600.2x.jpg",
     scores: ["5", "3", "1", "4", "2", "2", "5", "1", "3", "1"]
@@ -34,5 +34,6 @@ var friends = [{
     name: "Olive Penderghast",
     photo: "https://s3.r29static.com//bin/entry/a73/340x408/1771006/image.png",
     scores: ["5", "1", "2", "4", "3", "5", "3", "2", "1", "2", ]
-}
-];
+}];
+
+module.exports = friendsArray
