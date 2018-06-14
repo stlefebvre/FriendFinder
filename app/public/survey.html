@@ -291,17 +291,63 @@
                 <label class="form-check-label" for="Q10op5">5 (Strongly Agree)</label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
         </form>
 
-    </div>
+        <div class="container">
+            <div>
+                <h5>Closest Friend Match</h5>
+                <hr>
+                <h5 id="userMatch"></h5>
+                <img id="userMatchImage">
+            </div>
+        </div>
 
+        <footer>
+            <div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api/friends">API Friends List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/stlefebvre/FriendFinder">GitHub Repo</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $("#submitButton").on("click", function(event) {
+            event.preventDefault();
+            var userInput = {
+                name: $("userName").val().trim(),
+                photo: $("userPhoto").val().trim(),
+                scores: [
+                    $("#Q1").val().trim(),
+                    $("#Q2").val().trim(),
+                    $("#Q3").val().trim(),
+                    $("#Q4").val().trim(),
+                    $("#Q5").val().trim(),
+                    $("#Q6").val().trim(),
+                    $("#Q7").val().trim(),
+                    $("#Q8").val().trim(),
+                    $("#Q9").val().trim(),
+                    $("#Q10").val().trim()
+                ]
+            };
+
+            $.post("/api/friends", userInput).done(function(data) {
+                $("#userMatch").html(data.matchName);
+                $("#userMatchImage").attr("src", data.matchImage);
+            })
+        })
+    </script>
 </body>
 
 </html>
